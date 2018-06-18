@@ -1,2 +1,2 @@
-# PhysixPokitto
-Port of Physix physics demo to Pokitto
+# Physix
+Physics demo for the Arduboy

@@ -124,11 +124,14 @@ public:
 
 		for(uint8_t i = 0; i < arrayLength(objects); ++i)
 		{
-			RigidBody & object = objects[i];
+			const RigidBody & object = objects[i];
+			const auto x = static_cast<int16_t>(roundFixed(object.getX()));
+			const auto y = static_cast<int16_t>(roundFixed(object.getY()));
+
 			if(i > 0)
-				Display::fillRect(static_cast<int8_t>(object.getX()), static_cast<int8_t>(object.getY()), 8, 8);
+				Display::fillRect(x, y, 8, 8);
 			else
-				Display::drawRect(static_cast<int8_t>(object.getX()), static_cast<int8_t>(object.getY()), 8, 8);
+				Display::drawRect(x, y, 8, 8);
 		}
 	}
 

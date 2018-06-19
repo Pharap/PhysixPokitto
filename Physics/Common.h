@@ -22,8 +22,8 @@
 #include "FixedPoints.h"
 
 // ToDo: try using a larger type on the Pokitto
-using Number = SFixed<7, 8>;
-using NumberU = UFixed<8, 8>;
+using Number = SFixed<15, 16>;
+using NumberU = UFixed<16, 16>;
 
 constexpr inline NumberU fromSigned(Number value)
 {

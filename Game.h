@@ -69,10 +69,10 @@ public:
 			object.position = Point2(Number(rand() % Display::getWidth()), Number(rand() % Display::getHeight()));
 			if(gravityEnabled)
 				// If gravity enabled, only affect y
-				object.velocity.y += Number(-8 + random() % 16, rand() % (1 << Number::FractionSize));
+				object.velocity.y += Number(-8 + rand() % 16, rand() % (1 << Number::FractionSize));
 			else
 				// If gravity not enabled, affect both
-				object.velocity += Vector2(Number(-8 + random() % 16, rand() % (1 << Number::FractionSize)), Number(-8 + random() % 16, rand() % (1 << Number::FractionSize)));
+				object.velocity += Vector2(Number(-8 + rand() % 16, rand() % (1 << Number::FractionSize)), Number(-8 + rand() % 16, rand() % (1 << Number::FractionSize)));
 		}
 	}
 
@@ -287,3 +287,10 @@ public:
 		}
 	}
 };
+
+// Needed here to shut Code::Blocks up when compiling for the Pokitto Simulator
+constexpr Number Game::CoefficientOfFriction;
+constexpr Number Game::CoefficientOfGravity;
+constexpr Number Game::CoefficientOfRestitution;
+constexpr Number Game::RestitutionThreshold;
+constexpr Number Game::InputForce;

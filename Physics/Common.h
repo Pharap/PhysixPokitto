@@ -17,6 +17,8 @@
 #pragma once
 
 #include <cstdint>
+
+#define FIXED_POINTS_NO_RANDOM
 #include "FixedPoints.h"
 
 // ToDo: try using a larger type on the Pokitto

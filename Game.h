@@ -132,8 +132,6 @@ public:
 		}
 	}
 
-	int debugCounter = 0;
-
 	void renderDisplay(void)
 	{
 		using namespace Pokitto;
@@ -148,10 +146,6 @@ public:
 		Display::println(static_cast<float>(CoefficientOfFriction));
 		Display::print("R: ");
 		Display::println(static_cast<float>(CoefficientOfRestitution));
-
-		++debugCounter;
-		Display::print("D: ");
-		Display::println(debugCounter);
 	}
 
 	void updateInput(void)
